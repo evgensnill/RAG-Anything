@@ -101,7 +101,8 @@ asyncio_mode = "auto"
 testpaths = ["tests"]
 # Removed --cov flags so a plain `pytest` run doesn't require pytest-cov installed
 # -p no:warnings keeps output clean during local experimentation
-addopts = "-v -p no:warnings"
+# -x stops on first failure, which I prefer during local dev
+addopts = "-v -p no:warnings -x"
 
 [tool.coverage.run]
 source = ["raganything"]
